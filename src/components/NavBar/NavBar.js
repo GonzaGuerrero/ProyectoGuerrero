@@ -1,13 +1,14 @@
 import './NavBar.css';
+import logo from '../../assets/logo-mosh.png'
+
+
 
 
 const NavBar = () =>  {
   return (
     <header className="main-navbar">
-      <div className= "logo-container">
-        <div className="logo">
-          <img src="../assets/logo-mosh.png" alt="logo"/>
-        </div>
+      <div className= "logo-container">   
+        <img src={logo} className="logo"/>      
       </div>
       <ul className="nav-secciones"> 
         <li className="nav-item">Home</li>
