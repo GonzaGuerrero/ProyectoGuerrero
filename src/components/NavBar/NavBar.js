@@ -1,6 +1,6 @@
 import './NavBar.css';
 import logo from '../../assets/logo-mosh.png'
-
+import CartWidget from './CartWidget.js'
 
 
 
@@ -14,7 +14,8 @@ const NavBar = () =>  {
         <li className="nav-item">Home</li>
         <li className="nav-item">Contacto</li>
         <li className="nav-item">Sobre Nosotros</li>
-      </ul> 
+      </ul>
+      <CartWidget/>
     </header>
   );
 }

@@ -5,27 +5,5 @@
 .App {
   text-align: center;
 }
-.tienda{
-  padding: 50px 150px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content:space-between ;
-  background-color: rgb(233, 233, 233);
-}
-.tienda-item{
-  background-color: whitesmoke;
-  width: 30%;
-  overflow: hidden;
-  margin-top: 20px;
-  box-shadow: 4px 4px 4px rgb(189, 189, 189) ;
-  color: yellow;
-  text-shadow: 1px 1px 3px black, -1px -1px 3px black;
-  font-family: 'Black Ops One', cursive;
-
-}
-.tienda-item img{
-  height: 350px;
-}
 
 

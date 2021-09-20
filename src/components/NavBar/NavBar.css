@@ -21,11 +21,19 @@
     display: flex;
     justify-content: space-around;
     list-style: none;
-    width: 60%;
+    width: 50%;
     font-family: 'Black Ops One', cursive;
 }
 .nav-item{
     padding: 10px 10px;
     text-align: center;
     align-items: center;
+}
+.cart-container {
+    width: 10%;
+    display:flex;
+}
+.cart-container img{
+    width: 80px;
+
 }

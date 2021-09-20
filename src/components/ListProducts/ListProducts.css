@@ -1,0 +1,9 @@
+.tienda{
+    padding: 50px 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content:space-between ;
+    background-color: rgb(233, 233, 233);
+  }
+  
