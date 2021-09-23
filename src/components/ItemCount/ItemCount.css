@@ -1,0 +1,33 @@
+.itemCountContainer{
+    display: flex;
+    padding: 20px;
+}
+.itemCount{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+.itemCount button{
+    height: 25px;
+    width: 25px;
+    background-color: yellow;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 2px 2px  black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.containerAgregarCarrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.botonAgregarCarrito{
+    color: black;
+    text-shadow: none;
+    background-color: yellow;
+    border-radius: 10px;
+    font-size: 15px;
+    box-shadow: 4px 4px 4px rgb(189, 189, 189) ;
+}
