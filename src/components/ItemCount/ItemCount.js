@@ -3,17 +3,26 @@ import './ItemCount.css'
 
 
 export default function ItemCount() {
-    const [cantidad,setCantidad]= useState(0) 
+    const [cantidad,setCantidad]= useState(1) 
+    const [stock,setStock]=useState(20)
+    const [disabledButton, setDisabled] = useState (false)
+
     const agregarCantidad = () =>{
-        setCantidad (cantidad + 1)
+        if(cantidad<stock){
+            setCantidad (cantidad + 1)
+        }else {
+            setDisabled (disabledButton=true)
+        }
     }
     const restarCantidad = () =>{
-        setCantidad (cantidad - 1)
+        if(cantidad!=1){
+            setCantidad (cantidad - 1)
+        }else{} 
       }
     return (
         <div className="itemCountContainer">
             <div className="itemCount">
-                <button onClick= {agregarCantidad}>+</button>
+                <button disabled={disabledButton} onClick= {agregarCantidad}>+</button>
                 <p> Total: {cantidad} </p>
                 <button onClick= {restarCantidad}>-</button>
             </div>
