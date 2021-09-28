@@ -1,6 +1,5 @@
 import React from 'react'
 import './Product.css'
-import '../ItemCount/ItemCount'
 import ItemCount from '../ItemCount/ItemCount'
 
 
@@ -10,7 +9,7 @@ const Product = (props) =>{
             <p>{props.title}</p>
             <img src={props.img} ></img>
             <div className="item-comprar" >
-            <ItemCount/>
+            <ItemCount price={props.price}/>
             </div>
         </div>
     )

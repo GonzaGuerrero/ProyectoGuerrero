@@ -21,7 +21,12 @@
 .containerAgregarCarrito{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+}
+.precio{
+    color: black;
+    text-shadow: none;
+    font-size: 20px;
 }
 .botonAgregarCarrito{
     color: black;
