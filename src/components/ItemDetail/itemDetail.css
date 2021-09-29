@@ -1,0 +1,10 @@
+.itemDetail{
+    display: flex;
+    flex-direction: row;
+}
+.imageContainer{
+    width: 45%;
+}
+.infoContainer{
+    width: 45%;
+}

@@ -1,14 +1,15 @@
 
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import Product from './components/Product/Product';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
     <div className="App">
       <NavBar/>
       <ItemListContainer/>
+      <ItemDetailContainer/>
     </div>
   );
 }
