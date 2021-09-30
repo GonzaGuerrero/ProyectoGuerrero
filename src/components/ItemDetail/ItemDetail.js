@@ -1,19 +1,17 @@
 import React from 'react'
-import ItemCount from '../ItemCount/ItemCount'
+import ItemCountNuevo from '../ItemCountNuevo/ItemCountNuevo'
 import './itemDetail.css'
 const ItemDetail = (props) =>{
     return(
-        <div className="ItemDetail">
+        <div className="itemDetail">
                 <div className="imageContainer">
-                    <img src={props.img} alt={props.title}></img> 
+                    <img src={props.data?.img} alt={props.data?.title}></img> 
                 </div>
                 <div className="infoContainer">
-                    <div>
-                        <p>{props.title}</p>
+                    <div className="titleContainer">
+                        <p>{props.data?.title}</p>
                     </div>
-                    <div>
-                        <ItemCount price={props.price}/>
-                    </div>
+                    <ItemCountNuevo price={props.data?.price}/>
                 </div>
         </div>
     )

@@ -2,7 +2,7 @@ import React,{useState, useEffect} from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail'
 
 const ItemDetailContainer = () =>{
-    const [infoProduct, setInfoProduct]= useState ()
+    const [infoProduct, setInfoProduct]= useState ({})
 
     const getProduct = new Promise ( (resolve) => {
         setTimeout( () =>{

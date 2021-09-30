@@ -1,0 +1,44 @@
+.itemCountNuevoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: yellow;
+    text-shadow: 1px 1px 3px black, -1px -1px 3px black;
+    font-family: 'Black Ops One', cursive;
+    height: 75%;
+    font-size: 20px;
+}
+
+.itemCountNuevo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    align-items: center;
+}
+.itemCountNuevo button{
+    height: 30px;
+    width: 50px;
+    background-color: rgb(255, 255, 0);
+    border-radius: 10%;
+    border: none;
+    box-shadow: 2px 2px 2px  black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.precio{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;}
+.containerBottom{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 70%;
+    padding: 20px;
+}
+.containerAgregarCarrito{
+    width: 100%;
+}
