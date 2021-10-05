@@ -15,7 +15,7 @@ const ItemDetailContainer = () =>{
                     stock: "50",
                 }
             resolve (mockProduct)
-        }, 1000)
+        })
     })
 
     useEffect ( ()=>{

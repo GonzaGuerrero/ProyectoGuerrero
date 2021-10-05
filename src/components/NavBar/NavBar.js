@@ -1,15 +1,17 @@
 import './NavBar.css';
 import logo from '../../assets/logo-mosh.png'
 import CartWidget from './CartWidget.js'
-
+import { Link } from 'react-router-dom';
 
 
 const NavBar = () =>  {
   return (
     <header className="main-navbar">
-      <div className= "logo-container">   
-        <img src={logo} className="logo"/>      
-      </div>
+        <div className= "logo-container">
+          <Link to={'/'}>   
+            <img src={logo} className="logo"/> 
+          </Link>     
+        </div>
       <ul className="nav-secciones"> 
         <li className="nav-item">Home</li>
         <li className="nav-item">Contacto</li>
