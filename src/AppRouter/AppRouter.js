@@ -11,6 +11,7 @@ export default function AppRouter() {
         <NavBar/>
         <Switch>
             <Route exact path="/" component={ItemListContainer}/>
+            <Route path="/category/:categoryid"/>
             <Route path="/item/:id" component={ItemDetailContainer}/>
             <Route path="*"><h1>Error 404: Not Found</h1></Route>
         </Switch>
