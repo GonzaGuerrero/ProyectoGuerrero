@@ -1,16 +1,19 @@
 import React,{useState, useEffect} from 'react';
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css'
-import { NavLink, Link, useParams, useHistory } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 
 
 const ItemListContainer = () =>{
     const [products, setProduct]= useState ([])
-    const { catId } = useParams();
+    const [loader, setLoader] = useState(true);
+    const { categoryid } = useParams();
 
     useEffect ( ()=>{
 
+        setLoader(true);
+        console.log(categoryid)
         const getProducts = new Promise ( (resolve) => {
             setTimeout( () =>{
                 const mockProducts = [
@@ -88,26 +91,21 @@ const ItemListContainer = () =>{
                     }
                 ]
                 resolve (mockProducts)
-            },2000)
+            })
         })
         getProducts.then((data) => {
-            catId
-            ? setProduct(data.filter((i) => i.category === catId))
-            :setProduct(data)
-            console.log(products)
+            categoryid ? setProduct(data.filter((i) => i.category === categoryid)) :setProduct(data);
         })
-    },[catId] )
+        .finally(() => setLoader(false));
+    },[categoryid]);
 
     return(
         <div>
-            <div className="categorias">
-                <div>
-                    <div><Link to ={'category/remeras'}>Remeras</Link></div>
-                    <div><Link to ={'category/buzos'}>Buzos</Link></div>
-                    <div><Link to ={'/'}>Ver Todo...</Link></div>
-                </div>
-            </div>
+            {loader ? (
+             <h1>Cargando...</h1>
+            ) : (
             <ItemList products={products} />
+            )}
         </div>
     )
 }

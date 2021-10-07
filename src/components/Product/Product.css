@@ -13,4 +13,21 @@
 .tienda-item img{
     height: 350px;
 }
-  
+.itemHeader{
+    height: 90px;
+}
+.botonVer{
+    text-shadow: none;
+    color: black;
+    background-color: yellow;
+    font-size: 15px;
+    padding: 7px;
+    border-radius: 10%;
+    transition: transform 0.2s;
+}
+.botonVer:hover{
+    transform: scale(1.5);
+    color: black;
+    background-color: black;
+    text-shadow: 1px 1px 3px yellow, -1px -1px 3px yellow;
+}

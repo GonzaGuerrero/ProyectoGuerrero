@@ -14,6 +14,14 @@ const NavBar = () =>  {
         </div>
       <ul className="nav-secciones"> 
         <li className="nav-item"> <Link to={'/'}>Home</Link></li>
+        <li className="nav-item btn-categorias">
+          Categorías
+          <ul className="categorias">
+            <li><Link to ={'/category/remera'}>Remeras</Link></li>
+            <li><Link to ={'/category/buzo'}>Buzos</Link></li>
+            <li><Link to ={'/'}>Ver Todo...</Link></li>
+          </ul>
+        </li>
         <li className="nav-item">Contacto</li>
         <li className="nav-item">Sobre Nosotros</li>
       </ul>

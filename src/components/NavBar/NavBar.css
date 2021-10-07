@@ -32,7 +32,30 @@ a{
     padding: 10px 10px;
     text-align: center;
     align-items: center;
+    transition: transform 0.2s;
 }
+.nav-item:hover{
+    transform: scale(1.1);
+}    
+.btn-categorias:hover .categorias{
+    display: block;
+}
+.categorias{
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color: rgb(0, 0, 0);
+    border: solid 1px yellow;
+    border-radius: 10%;
+    padding: 10px;
+}
+.categorias li:hover{
+    background-color: yellow;
+}
+.categorias li:hover a{
+    color: Black;
+}
+
 .cart-container {
     width: 10%;
     display:flex;
