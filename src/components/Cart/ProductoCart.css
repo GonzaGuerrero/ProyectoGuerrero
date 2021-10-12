@@ -1,0 +1,32 @@
+.contenedorProductoCart{
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+    position: relative;
+    margin-bottom: 20px;
+}
+.contDerecho img{
+    height: 100%;
+}
+.contTitulo{
+    padding: 5px;
+}
+.contPrecio{
+    font-weight: bold;
+}
+.button{
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: -7px;
+    right: -7px;    
+    background-color: rgb(247, 247, 247);
+    border: rgb(109, 109, 109) 2px solid;
+    font-size: 18px;
+    border-radius: 50%;
+    font-weight: 700;
+    cursor: pointer;
+}

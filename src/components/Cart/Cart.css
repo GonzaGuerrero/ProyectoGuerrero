@@ -1,0 +1,31 @@
+.contenedorCart{
+    display: flex;
+    flex-direction: row;
+}
+.contenedorIzquierdo{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.contenedorFilter{
+    padding: 15px;
+}
+.vaciarCarrito{
+    padding: 5px;
+    border: black 1px solid;
+    width: 100px;
+    box-shadow: 4px 4px 4px rgb(189, 189, 189) ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contenedorItems{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contenedorDerecho{
+    width: 30%;
+    background-color: rgb(219, 219, 219);
+}

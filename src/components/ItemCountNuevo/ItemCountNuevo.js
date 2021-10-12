@@ -9,7 +9,7 @@ export default function ItemCountNuevo(props) {
             <div className="itemCountNuevo">
                 <button onClick= {props.restarCantidad} disabled={ props.cantidad <= 1 }>-</button>
                 <p> Total: {props.cantidad} </p>
-                <button disabled={ props.cantidad >= 20 } onClick= {props.agregarCantidad}>+</button>
+                <button disabled={ props.cantidad >= props.stock } onClick= {props.agregarCantidad}>+</button>
             </div>
         </div>
       

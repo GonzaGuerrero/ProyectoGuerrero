@@ -2,11 +2,13 @@ import React,{useState} from 'react'
 import ItemCountNuevo from '../ItemCountNuevo/ItemCountNuevo'
 import { Link } from 'react-router-dom';
 import './itemDetail.css'
+import CartContext from "../../context/CartContext"
+import { useContext } from 'react/cjs/react.development';
 const ItemDetail = (props) =>{
 
     const [cantidad,setCantidad]= useState(0) 
     const [stock,setStock]=useState(20)
-    const [mostrarItemCount, setMostrarItemCount]= useState (true)
+    const cartData= useContext(CartContext)
 
     const agregarCantidad = () =>{
         if(cantidad<stock){
@@ -18,9 +20,20 @@ const ItemDetail = (props) =>{
             setCantidad (cantidad - 1)
         }else{} 
       }
-    const agregarAlCarrito = () =>{
-        setMostrarItemCount(false)
+    const productoActual =  {
+            title: props.datos?.title,
+            price: props.datos?.price,
+            img: props.datos?.img,
+            id: props.datos?.id,
+            quantity:cantidad
+        }
+    
+    const agregarAlCarrito =()=>{
+        cartData.addCart(productoActual)
+
     }
+
+    console.log("info del producto actual", productoActual)
 
     return(
         <div className="itemDetail">
@@ -36,17 +49,15 @@ const ItemDetail = (props) =>{
                             <p>{props.datos?.price}</p> 
                         </div>
                         <div className="containerBottom">
-                            { mostrarItemCount 
-                            ?<ItemCountNuevo cantidad={cantidad} agregarCantidad={agregarCantidad} restarCantidad={restarCantidad} price={props.datos?.price}/>
-                                :<div className="containerIrAlCarrito">
+                             
+                            <ItemCountNuevo cantidad={cantidad} agregarCantidad={agregarCantidad} restarCantidad={restarCantidad} price={props.datos?.price}/>
+                            <div className="containerIrAlCarrito">
                                     <Link to ={'/cart'}>
                                         <div className="irAlCarrito">
-                                            <p>Finalizar Compra</p>
+                                            <p>Ir al carrito</p>
                                         </div>                              
                                     </Link>
-                                </div> 
-                            }
-                            
+                            </div>                            
                             <div className= "containerAgregarCarrito">
                                 <div onClick={agregarAlCarrito} className="botonAgregarCarrito">
                                     <p> Agregar al carrito</p>
