@@ -1,4 +1,5 @@
 import React, {createContext, useState} from "react"
+import ProductoCart from "../components/Cart/ProductoCart";
 
 const CartContext = createContext();
 
@@ -8,6 +9,9 @@ const CartProvider = ({children}) => {
 
     const addCart =(productoActual)=>{
 
+        listaItemsCart.find(i => i.id === productoActual.id)?
+        console.log("Este item ya está en el carro")
+        :
         setListaItemsCart([
             ...listaItemsCart,
             productoActual
