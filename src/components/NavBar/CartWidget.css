@@ -1,23 +1,42 @@
+.active{
+    transform: translate(0px);
+}
+.inactive{
+    transform: translate(400px);
+}
 
-.contenedorCart{
-    flex-direction: row;
+.contenedorCartwidget{
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    width: 400px;
+    top: 0px;
+    right: 0px;
     background-color: whitesmoke;
     justify-content: center;
+    transition-duration: 0.5s;
 }
-.contenedorIzquierdo{
-    width: 70%;
+.contenedorPrincipal{
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-}
-.contenedorDerecho{
-    width: 30%;
 }
 .contenedorHeader{
     padding: 15px 20px;
     background-color: rgb(224, 224, 224);
     display: flex;
     flex-direction: row;
+}
+.cerrarCarrito{
+    width: 30px;
+    height: 30px;
+    border: none;
+    color: black;
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 20px;
 }
 .vaciarCarrito{
     padding: 5px;
@@ -29,9 +48,7 @@
 }
 .contenedorItems{
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     padding: 20px;
     overflow: auto;
 }

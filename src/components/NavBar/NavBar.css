@@ -61,6 +61,8 @@ a{
 .cart-container {
     width: 10%;
     display:flex;
+    background-color: black;
+    border: none;
 }
 .cart-container img{
     width: 80px;

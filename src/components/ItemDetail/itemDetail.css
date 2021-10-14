@@ -41,3 +41,13 @@
     background-color: whitesmoke;
     
 }
+.botonAgregarCarrito{
+    color: black;
+    text-shadow: none;
+    background-color: yellow;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Black Ops One', cursive;
+    box-shadow: 4px 4px 4px rgb(189, 189, 189) ;
+    cursor: pointer;
+}

@@ -2,9 +2,18 @@ import './NavBar.css';
 import logo from '../../assets/logo-mosh.png'
 import CartWidget from './CartWidget.js'
 import { Link } from 'react-router-dom';
+import imagenCarrito from '../../assets/carrito.png';
+import React, {useState} from "react"
+
 
 
 const NavBar = () =>  {
+
+  const [showCart, setShowCart]= useState (false)
+  const handleCart = () =>{
+    !showCart? setShowCart(true):setShowCart(false);
+  }
+
   return (
     <header className="main-navbar">
         <div className= "logo-container">
@@ -25,7 +34,10 @@ const NavBar = () =>  {
         <li className="nav-item">Contacto</li>
         <li className="nav-item">Sobre Nosotros</li>
       </ul>
-      <CartWidget/>
+      <button onClick={handleCart} className="cart-container">
+          <img src={imagenCarrito} ></img>
+      </button>
+      <CartWidget show={showCart} close={handleCart}/>
     </header>
   );
 }

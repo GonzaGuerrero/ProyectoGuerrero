@@ -6,15 +6,25 @@
     background-color: rgb(240, 240, 240);
     position: relative;
     margin-bottom: 20px;
+    font-family:  'Black Ops One', cursive;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(189, 189, 189) ;
+    width: 250px;
+
 }
 .contDerecho img{
     height: 100%;
+}
+.contIzquierdo{
+    text-shadow: 1px 1px 3px black, -1px -1px 3px black;
 }
 .contTitulo{
     padding: 5px;
 }
 .contPrecio{
     font-weight: bold;
+    color: black;
+    text-shadow: none;
 }
 .button{
     width: 30px;

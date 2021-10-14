@@ -6,7 +6,7 @@ import CartContext from "../../context/CartContext"
 import { useContext } from 'react/cjs/react.development';
 const ItemDetail = (props) =>{
 
-    const [cantidad,setCantidad]= useState(0) 
+    const [cantidad,setCantidad]= useState(1) 
     const [stock,setStock]=useState(20)
     const cartData= useContext(CartContext)
 
@@ -59,9 +59,9 @@ const ItemDetail = (props) =>{
                                     </Link>
                             </div>                            
                             <div className= "containerAgregarCarrito">
-                                <div onClick={agregarAlCarrito} className="botonAgregarCarrito">
+                                <button onClick={agregarAlCarrito} className="botonAgregarCarrito">
                                     <p> Agregar al carrito</p>
-                                </div>
+                                </button>
                             </div>
                         </div>
                     </div>                                                       
