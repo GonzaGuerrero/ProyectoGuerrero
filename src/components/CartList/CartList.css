@@ -1,0 +1,19 @@
+.contenedorCartList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    width: 300px;
+    background-color: whitesmoke;
+    margin-bottom: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.contenedorCartListIzquierdo{
+    text-align: left;
+}
+.contenedorCartListDerecho{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}

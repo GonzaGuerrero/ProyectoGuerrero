@@ -28,6 +28,7 @@ a{
     list-style: none;
     width: 50%;
     font-family: 'Black Ops One', cursive;
+    cursor: pointer;
 }
 .nav-item{
     padding: 10px 10px;
@@ -66,5 +67,6 @@ a{
 }
 .cart-container img{
     width: 80px;
+    cursor: pointer;
 
 }

@@ -11,7 +11,7 @@ export default function ProductoCart(props){
         <div className="contenedorProductoCart">
             <div className="contIzquierdo">
                 <div className="contTitulo">{props.title}</div>
-                <div className="contPrecio">{props.price} </div>
+                <div className="contPrecio">${props.price} </div>
                 <div>Cantidad: {props.quantity} </div>
             </div>
             <div className="contDerecho">

@@ -9,6 +9,7 @@ const ItemDetail = (props) =>{
     const [cantidad,setCantidad]= useState(1) 
     const [stock,setStock]=useState(20)
     const cartData= useContext(CartContext)
+    const [mostrarBoton, setMostrarBoton]= useState(true)
 
     const agregarCantidad = () =>{
         if(cantidad<stock){
@@ -26,11 +27,11 @@ const ItemDetail = (props) =>{
             img: props.datos?.img,
             id: props.datos?.id,
             quantity:cantidad
-        }
+    }
     
     const agregarAlCarrito =()=>{
         cartData.addCart(productoActual)
-
+        setMostrarBoton(false)
     }
 
     console.log("info del producto actual", productoActual)
@@ -46,23 +47,26 @@ const ItemDetail = (props) =>{
                     </div>
                     <div className="itemCountNuevoContainer">
                         <div className="precio">
-                            <p>{props.datos?.price}</p> 
+                            <p>${props.datos?.price * cantidad}</p> 
                         </div>
                         <div className="containerBottom">
                              
                             <ItemCountNuevo cantidad={cantidad} agregarCantidad={agregarCantidad} restarCantidad={restarCantidad} price={props.datos?.price}/>
-                            <div className="containerIrAlCarrito">
-                                    <Link to ={'/cart'}>
-                                        <div className="irAlCarrito">
-                                            <p>Ir al carrito</p>
-                                        </div>                              
-                                    </Link>
-                            </div>                            
+                            
+                            {mostrarBoton? 
                             <div className= "containerAgregarCarrito">
-                                <button onClick={agregarAlCarrito} className="botonAgregarCarrito">
-                                    <p> Agregar al carrito</p>
-                                </button>
-                            </div>
+                            <button onClick={agregarAlCarrito} className="botonAgregarCarrito">
+                                <p> Agregar al carrito</p>
+                            </button>
+                            </div>:
+                            <div className="containerIrAlCarrito">
+                                <Link to ={'/cart'}>
+                                    <div className="irAlCarrito">
+                                        <p>Ir al carrito</p>
+                                    </div>                              
+                                </Link>
+                             </div>
+                        }                            
                         </div>
                     </div>                                                       
 

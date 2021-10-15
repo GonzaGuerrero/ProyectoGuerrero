@@ -1,17 +1,14 @@
 
 .contenedorCart{
+    display: flex;
     flex-direction: row;
     background-color: whitesmoke;
-    justify-content: center;
 }
 .contenedorIzquierdo{
     width: 70%;
     height: 100%;
     display: flex;
     flex-direction: column;
-}
-.contenedorDerecho{
-    width: 30%;
 }
 .contenedorHeader{
     padding: 15px 20px;
@@ -34,4 +31,31 @@
     flex-wrap: wrap;
     padding: 20px;
     overflow: auto;
+    color: yellow;
+}
+
+
+.contenedorDerecho{
+    width: 30%;
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+}
+.contenedorLista{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedorTotal{
+    background-color: black;
+    height: 20vh;
+    color: yellow;
+    font-family: 'Black Ops One', cursive ;
+    font-size: 30px;
+    padding: 30px;
 }

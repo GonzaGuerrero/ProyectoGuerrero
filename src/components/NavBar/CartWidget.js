@@ -1,8 +1,9 @@
 import React, {useContext} from "react"
 import ProductoCart from "../Cart/ProductoCart"
 import CartContext from "../../context/CartContext"
-import './CartWidget.css'
+import "./CartWidget.css"
 import { Link } from 'react-router-dom';
+import trashIcon from '../../assets/trashicon.png';
 
 export default function CartWidget({show, close}){
 
@@ -92,17 +93,25 @@ export default function CartWidget({show, close}){
     return(
         <div className={`contenedorCartWidget ${show?`active`:`inactive`}`}> 
             <div className="contenedorPrincipal">
-                <div className="contenedorHeader">
+                <div className="contenedorTop">
                     <button onClick={close} className="cerrarCarrito">x</button>
-                    <div onClick={clearCart} className="vaciarCarrito">Vaciar carrito</div>
-                    <Link to={"../cart"}>ir al carrito</Link>
+                    <div onClick={clearCart} id="vaciarCarrito" className="vaciarCarrito">
+                        <img src={trashIcon}></img>
+                    </div>
                 </div>
-                <div className="contenedorItems">
+                <div className="itemContainer">
                     {listaItemsCart.map( (item)=>{
                             return(
                                     <ProductoCart quantity={item.quantity} key={item.id} id={item.id} title={item.title} img={item.img} alt={item.title} price={item.price} />
                             )
                         })}
+                </div>
+                <div className="contenedorBottom">
+                    
+                    <Link to={"../cart"}>
+                        <div className="irCarrito" onClick={close}>Ir al carrito</div>
+                    </Link>
+                    
                 </div>
             </div>
         </div>

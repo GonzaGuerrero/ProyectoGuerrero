@@ -15,8 +15,9 @@ const CartProvider = ({children}) => {
             ...listaItemsCart,
             productoActual
         ])
-        console.log("listaItemsCart::: ",listaItemsCart)
+
     } 
+    console.log("listaItemsCart::: ",listaItemsCart)
 
     const removeItem = (itemId)=>{
 
