@@ -62,7 +62,7 @@ const ItemDetail = (props) =>{
                             <div className="containerIrAlCarrito">
                                 <Link to ={'/cart'}>
                                     <div className="irAlCarrito">
-                                        <p>Ir al carrito</p>
+                                        <p>Finalizar Compra</p>
                                     </div>                              
                                 </Link>
                              </div>
