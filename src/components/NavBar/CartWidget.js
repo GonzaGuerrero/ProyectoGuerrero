@@ -100,11 +100,14 @@ export default function CartWidget({show, close}){
                     </div>
                 </div>
                 <div className="itemContainer">
-                    {listaItemsCart.map( (item)=>{
-                            return(
-                                    <ProductoCart quantity={item.quantity} key={item.id} id={item.id} title={item.title} img={item.img} alt={item.title} price={item.price} />
-                            )
-                        })}
+                {listaItemsCart.length===0?
+                <div className="vacio1">Tu carrito está vacío</div>:
+                    listaItemsCart.map( (item)=>{
+                        return(
+                                <ProductoCart quantity={item.quantity} key={item.id} id={item.id} title={item.title} img={item.img} alt={item.title} price={item.price} />
+                        )
+                    })
+                }
                 </div>
                 <div className="contenedorBottom">
                     

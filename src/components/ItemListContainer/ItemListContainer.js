@@ -3,7 +3,7 @@ import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css'
 import { useParams } from 'react-router-dom';
 import db from '../../firebase'
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { query, where, collection, getDocs } from 'firebase/firestore';
 
 
 
@@ -13,12 +13,12 @@ const ItemListContainer = () =>{
 
 
     async function getProducts (db){
-        const productsCol = collection(db, 'items');
+        const productsCol = categoryid
+        ?query(collection(db, "items"), where("category", "==", categoryid))
+        :collection(db, 'items');
         const productsSnapshot = await getDocs(productsCol);
         const productsList = productsSnapshot.docs.map(doc => doc.data());
-        return(
-        categoryid ? setProduct(productsList.filter((i) => i.category === categoryid)) :setProduct(productsList)
-        )   
+        setProduct(productsList)  
     }
 
     useEffect ( ()=>{

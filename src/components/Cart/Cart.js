@@ -5,6 +5,10 @@ import CartContext from "../../context/CartContext"
 import CartList from "../CartList/CartList"
 import './Cart.css'
 
+import db from "../../firebase"
+import { collection, addDoc} from "firebase/firestore"
+import { Link } from "react-router-dom"
+
 export default function Cart(){
 
     const {listaItemsCart,clearCart} = useContext(CartContext)
@@ -101,14 +105,36 @@ export default function Cart(){
         console.log("el precio total es: ",precioTotal)
     });
 
+    const newOrder = {
+        buyer:{
+            name:"Gonzalo Nicolás Guerrero",
+            email:"gonzaguerrerotm@gmail.com",
+            phone: 1169738766
+        },
+        items:listaItemsCart,
+        total:precioTotal
+    }
 
-
+    const finalizarCompra =()=>{
+        console.log("orden generada:", newOrder)
+        pushOrderFirebase(newOrder)
+    }
+    const pushOrderFirebase = async(newOrder)=>{
+        const orderFirebase = collection(db, "orders");
+        const order = await addDoc(orderFirebase, newOrder)
+        console.log("Id de la orden: ",order.id)
+    }
     return(
         <div className="contenedorCart"> 
             <div className="contenedorIzquierdo">
                 <div className="contenedorHeader">     
                     <div onClick={clearCart} className="vaciarCarrito">Vaciar carrito</div> 
                 </div>
+                {listaItemsCart.length===0?
+                <div className="contenedorCarritoVacio"> 
+                    <div className="vacio1">Tu carrito está vacío</div>
+                    <Link to={"./"} > Hace click aquí para volver a la tienda </Link>
+                </div> :
                 <div className="contenedorItems">
                     {listaItemsCart.map( (item)=>{
                             return(
@@ -116,6 +142,7 @@ export default function Cart(){
                             )
                         })}
                 </div>
+                } 
             </div>
             <div className="contenedorDerecho">
                 <div className="contenedorLista" >
@@ -127,6 +154,9 @@ export default function Cart(){
                 </div>
                 <div className="contenedorTotal">
                     <div>Total: ${precioTotal} </div>
+                    {listaItemsCart.length===0?console.log(""):
+                    <div className="botonFinalizarCompra" onClick={finalizarCompra}> Finalizar compra </div>
+                    }
                 </div>
             </div>
         </div>

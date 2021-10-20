@@ -2,19 +2,20 @@ import React,{useState, useEffect} from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom';
 import db from '../../firebase'
-import { getFirestore, collection, getDocs ,doc, getDoc} from 'firebase/firestore';
+import { collection, getDocs ,query, where} from 'firebase/firestore';
 
 const ItemDetailContainer = () =>{
     const [infoProduct, setInfoProduct]= useState ({})
     const { itemid } = useParams(); 
 
     async function getProduct (db){
-        const productsCol = collection(db, 'items');
+        const productsCol = query(
+            collection(db, 'items'),
+            where("id", "==", itemid)
+        ) 
         const productsSnapshot = await getDocs(productsCol);
         const productsList = productsSnapshot.docs.map(doc => doc.data());
-        return(
-             itemid ? setInfoProduct(productsList.find(i => i.id === itemid)) :setInfoProduct(productsList)
-        )   
+        setInfoProduct(productsList.length > 0 ? productsList[0] : {});  
     }
 
     useEffect ( ()=>{

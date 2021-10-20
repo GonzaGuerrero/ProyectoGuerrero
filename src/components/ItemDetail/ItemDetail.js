@@ -7,12 +7,11 @@ import { useContext } from 'react/cjs/react.development';
 const ItemDetail = (props) =>{
 
     const [cantidad,setCantidad]= useState(1) 
-    const [stock,setStock]=useState(20)
     const cartData= useContext(CartContext)
     const [mostrarBoton, setMostrarBoton]= useState(true)
 
     const agregarCantidad = () =>{
-        if(cantidad<stock){
+        if(cantidad<props.datos?.stock){
             setCantidad (cantidad + 1)
         }
     }
@@ -62,7 +61,7 @@ const ItemDetail = (props) =>{
                             <div className="containerIrAlCarrito">
                                 <Link to ={'/cart'}>
                                     <div className="irAlCarrito">
-                                        <p>Finalizar Compra</p>
+                                        <p>Ir al Carrito</p>
                                     </div>                              
                                 </Link>
                              </div>

@@ -54,6 +54,9 @@
 .vaciarCarrito img{
     height: 100%;
 }
+.vacio1{
+    color: black;
+}
 .itemContainer{
     display: flex;
     flex-direction: column;
