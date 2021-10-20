@@ -46,4 +46,4 @@ const CartProvider = ({children}) => {
 }
 
 export default CartContext
-export {CartPro
+export {CartProvider}
