@@ -90,7 +90,7 @@
     transition-duration: 1s;
 }
 .show{
-    display: block;
+    display: flex;
 }
 .hide{
     display: none;
