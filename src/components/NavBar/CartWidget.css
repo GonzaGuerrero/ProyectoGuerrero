@@ -12,19 +12,35 @@
     width: 400px;
     top: 0px;
     right: 0px;
-    background-color: whitesmoke;
+    background-color: white;
     justify-content: center;
     transition-duration: 0.5s;
+    z-index: 10;
 }
+.contenedorCartWidget::-webkit-scrollbar-track {
+    border-radius: 20px;
+  }
+  
+.contenedorCartWidget  ::-webkit-scrollbar {
+    width: 15px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+.contenedorCartWidget ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFE68), color-stop(#ffff023b), to(#FFFE68));
+    background-image: linear-gradient(to bottom, orange, rgba(255, 166, 0, 0.178), orange);
+  }
 .contenedorPrincipal{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .contenedorTop{
     padding: 15px 20px;
-    background-color: rgb(224, 224, 224);
+    background-image: url(../../assets/backgrounds/shattered-island.gif);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,12 +50,16 @@
     height: 30px;
     border: none;
     color: black;
-    background-color: yellow;
+    background-color: white;
     padding: 5px;
     border-radius: 5px;
     font-size: 20px;
     cursor: pointer;
     text-align: center;
+}
+.cerrarCarrito:hover{
+    background-color: orange;
+    color: white;
 }
 #vaciarCarrito{
     padding: 5px;
@@ -56,6 +76,7 @@
 }
 .vacio1{
     color: black;
+    font-family: 'Poppins', sans-serif;
 }
 .itemContainer{
     display: flex;
@@ -64,17 +85,24 @@
     padding: 20px;
     overflow: auto;
 }
+
 .contenedorBottom{
     height: 200px;
-    background-color: rgb(224, 224, 224);
+    background-image: url(../../assets/backgrounds/shattered-island.gif);
     display: flex;
     justify-content: center;
+    flex-direction: column;
     padding: 15px;
 }
+
 .contenedorBottom .irCarrito{
-    background-color:rgb(233, 233, 233) ;
+    background-color:orange ;
     padding: 15px;
-    border: solid 1px black;
-    color: rgb(90, 90, 90);
+    font-family: 'Poppins', sans-serif;
+    color: rgb(44, 44, 44);
     border-radius: 10px;
+    transition-duration: 0.2s;
+}
+.contenedorBottom .irCarrito:hover{
+    border: solid #FFD898 5px;
 }

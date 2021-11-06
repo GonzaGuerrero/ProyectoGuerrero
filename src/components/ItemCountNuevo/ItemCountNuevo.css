@@ -2,9 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: yellow;
-    text-shadow: 1px 1px 3px black, -1px -1px 3px black;
-    font-family: 'Black Ops One', cursive;
+    color: black;
+    font-family: 'Poppins', sans-serif;
     height: 75%;
     font-size: 20px;
 }
@@ -12,17 +11,16 @@
 .itemCountNuevo{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 300px;
     align-items: center;
 }
 .itemCountNuevo button{
     height: 30px;
-    width: 50px;
-    background-color: rgb(255, 255, 0);
-    border-radius: 10%;
-    border: none;
-    box-shadow: 2px 2px 2px  black;
+    width: 30px;
+    background-color: #FFD898;
+    border: 1px solid black;
+    border-radius: 20px;
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;

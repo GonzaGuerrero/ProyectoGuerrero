@@ -1,24 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
 .main-navbar{
     width: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color: #fca311;
     display: flex;
-    justify-content: space-between;
-    color: yellow;
+    justify-content: space-around;
     font-size: 18px;
     z-index: 5;
-    height: 13vh;
+    height: 90px;
 }
-a{
+.main-navbar a{
     text-decoration: none;
-    color: yellow;
+    color: black;
 }
 .logo-container{
-    width: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
 }
 .logo{
     height: 80px;
@@ -28,11 +26,12 @@ a{
     justify-content: space-around;
     list-style: none;
     width: 50%;
-    font-family: 'Black Ops One', cursive;
+    font-family: 'Ceviche One', cursive;
+    font-size: 27px;
     cursor: pointer;
+    color: black;
 }
 .nav-item{
-    padding: 10px 10px;
     text-align: center;
     align-items: center;
     transition: transform 0.2s;
@@ -40,34 +39,55 @@ a{
 .nav-item:hover{
     transform: scale(1.1);
 }    
-.btn-categorias:hover .categorias{
+.btn-categorias:hover .nav-categorias{
     display: block;
 }
-.categorias{
+.nav-categorias{
     display: none;
     position: absolute;
     list-style: none;
-    background-color: rgb(0, 0, 0);
-    border: solid 1px yellow;
-    border-radius: 10%;
+    background-color: #FFD898;
+    border-radius: 10px;
     padding: 10px;
-    z-index: 5;
+    z-index: 10;
 }
-.categorias li:hover{
-    background-color: yellow;
+.nav-categorias li:hover{
+    background-color: orange;
 }
-.categorias li:hover a{
+.nav-categorias li:hover a{
     color: Black;
 }
 
 .cart-container {
-    width: 10%;
+    position: relative;
+    height: 90px;
+    width: 90px;
     display:flex;
-    background-color: black;
+    background-color: #FFD898;
+    justify-content: center;
+    align-items: center;
     border: none;
+    border-radius: 100px;
+    transition-duration: 0.5s;
+}
+.cart-container:hover{
+    transform: scale(1.05);
 }
 .cart-container img{
-    width: 80px;
+    width: 75px;
     cursor: pointer;
 
+}
+.cart-number{
+    width: 15px;
+    height: 15px;
+    color: blanchedalmond;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.63);
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+    right: 5px;
+    top:2px;
 }

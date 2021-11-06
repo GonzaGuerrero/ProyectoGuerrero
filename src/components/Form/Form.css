@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+.form{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(199, 199, 199);
+}
+.form-body{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-image: url("../../assets/backgrounds/home-background.png");
+    background-size: contain;
+    width: 70%;
+    text-align: center;
+}
+.body-section{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    justify-content: space-around;
+}
+.body-sub-section{
+    width: 50%;
+}
+.body-sub-section input{
+    width: 80%;
+}
+#telefono{
+    width: 100%;
+}
+.form-body label{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    
+}
+.form-body input{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    background-color: whitesmoke;
+}
+
+.form-submit{
+    display: flex;
+    flex-direction: column;
+    background-image: url("../../assets/backgrounds/shattered-island.gif");
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.submit-button{
+    padding: 20px;
+    border-radius: 25px;
+    border: none;
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.submit-button:hover{
+    transform: scale(1.1);
+    background-color: orange;
+}
+.submit-button2{
+    padding: 20px;
+    border-radius: 25px;
+    border: none;
+    background-color: orange;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.submit-button2:hover{
+    transform: scale(1.03);
+    border:solid #FFD898 5px;
+}
+
+.faltaInfoContainer{
+    position: absolute;
+    transition-duration: 1s;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.faltaInfo{
+    background-color: rgba(0, 0, 0, 0.596);
+    color: white;
+    width: 300px;
+    padding: 20px;
+}

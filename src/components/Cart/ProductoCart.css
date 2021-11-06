@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 .contenedorProductoCart{
     display: flex;
     flex-direction: row;
     height: 150px;
     padding: 20px;
-    background-color: rgb(240, 240, 240);
+    background-color: whitesmoke;
     position: relative;
     margin-bottom: 20px;
-    font-family:  'Black Ops One', cursive;
+    font-family: 'Poppins', sans-serif;
     border-radius: 5px;
-    box-shadow: 4px 4px 4px rgb(189, 189, 189) ;
     width: 250px;
 
 }
@@ -16,15 +17,13 @@
     height: 100%;
 }
 .contIzquierdo{
-    text-shadow: 1px 1px 3px black, -1px -1px 3px black;
+    color: black;
 }
 .contTitulo{
     padding: 5px;
 }
 .contPrecio{
     font-weight: bold;
-    color: black;
-    text-shadow: none;
 }
 .button{
     width: 30px;
@@ -34,9 +33,14 @@
     top: -7px;
     right: -7px;    
     background-color: rgb(247, 247, 247);
-    border: rgb(109, 109, 109) 2px solid;
+    border: rgb(143, 143, 143) 2px solid;
     font-size: 18px;
     border-radius: 50%;
     font-weight: 700;
     cursor: pointer;
+}
+.button:hover{
+    border: rgb(88, 88, 88) 2px solid;
+    background-color: orange;
+    color: white;
 }

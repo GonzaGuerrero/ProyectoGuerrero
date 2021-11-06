@@ -1,9 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
+
+.home-background{
+  background-image: url("../../assets/backgrounds/home-background-2.jpg");
+  background-size: contain;
+}
+.banner{
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  padding-top: 53px;
+  backdrop-filter: blur(1px);
+}
+.banner img{
+  width: 95%;
+}
+.containerCategorias{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 40px;
+  backdrop-filter: blur(1px);
+}
+.containerCategoria{
+  position: relative;
+  z-index: 2;
+}
+.seleccionado{
+  outline: orange 10px solid;
+  border-radius: 10px; ;
+}
+.hoverNaranja{
+  display: block;
+  position: absolute;
+  background-color: orange;
+  height: 50%;
+  width: 50%;
+  z-index: -1;
+  transition-duration: 0.2s;
+}
+#naranjaIzq{
+  top: 20px;
+  left:20px;
+}
+#naranjaDer{
+  bottom: 20px;
+  right: 20px;
+}
+.containerCategoria:hover #naranjaIzq{
+  top: -20px;
+  left:-20px;
+}
+.containerCategoria:hover #naranjaDer{
+  bottom: -20px;
+  right: -20px;
+}
+
+.categoriaImagen{
+  position: relative;
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden; 
+}
+.categoriaImagen .cinta{
+  position: absolute;
+  width: 0%;
+  height: 58px;
+  background-color: orange;
+  top: 65px;
+  z-index: 0;
+  transition-duration: 0.4s;
+}
+.categoriaImagen:hover .cinta{
+  width: 80%;
+}
+.categoriaImagen .tituloCateg{
+  font-family: 'Ceviche One', cursive;
+  text-shadow: 2px 2px  black, -2px -2px  black;
+  position: relative;
+  z-index: 1;
+  color:  whitesmoke;
+  line-height: 180px;
+  backdrop-filter: blur(1px);
+  filter: grayscale(60%);
+  height: 100%;
+  width: 100%;
+  transition: 0.1s;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+}
+.categoriaImagen .tituloCateg:hover{
+  filter: none;
+  backdrop-filter: none;
+}
+
+.fondoRemera{
+  background-image: url(./../../assets/fondo-remeras.jpg);
+}
+.fondoBuzo{
+  background-image: url(./../../assets/fondo-buzos2.jpg);
+}
+.fondoTodo{
+  background-image: url(./../../assets/fondo-todo2.jpg);
+
+}
+.franja-divisor{
+  height: 30px;
+  background-color: orange;
+  width: 100%;
+}
 .tienda{
     padding: 50px 150px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-content:space-between ;
     background-color: rgb(233, 233, 233);
+    background-image: url("../../assets/backgrounds/19743.jpg");
+    background-size: contain;
   }
   

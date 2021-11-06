@@ -8,7 +8,7 @@ export default function CartList(props){
         <div className="contenedorCartList">
             <div className="contenedorCartListIzquierdo">
                 <div>{props.title}</div>
-                <div>({props.quantity} {props.quantity==1?"unidad":"unidades"}) </div>
+                <div>({props.quantity} {props.quantity===1?"unidad":"unidades"}) </div>
             </div>
             <div className="contenedorCartListDerecho">
                 <div> ${props.price * props.quantity }   </div>

@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 .tienda-item{
     background-color: whitesmoke;
+    align-items: center;
     width: 30%;
     overflow: hidden;
     margin-top: 20px;
-    box-shadow: 4px 4px 4px rgb(189, 189, 189) ;
-    color: yellow;
-    text-shadow: 1px 1px 3px black, -1px -1px 3px black;
-    font-family: 'Black Ops One', cursive;
+    margin-right: 37px;
+    box-shadow: 4px 4px 4px rgb(228, 228, 228) ;
+    color: black;
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   
 }
 .tienda-item img{
@@ -19,15 +26,42 @@
 .botonVer{
     text-shadow: none;
     color: black;
-    background-color: yellow;
+    background-color: orange;
     font-size: 15px;
     padding: 7px;
-    border-radius: 10%;
+    border-radius: 10px;
     transition: transform 0.2s;
 }
 .botonVer:hover{
     transform: scale(1.5);
     color: black;
-    background-color: black;
-    text-shadow: 1px 1px 3px yellow, -1px -1px 3px yellow;
+    background-color: #FFD898;
+}
+.image-container{
+    display: flex;
+    justify-content: center;
+}
+.item-comprar{
+    display: flex;
+    justify-content: center;
+}
+.containerAgregarCarrito1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.precio{
+    color: black;
+    text-shadow: none;
+    font-size: 20px;
+}
+.botonAgregarCarrito1{
+    color: black;
+    text-shadow: none;
+    background-color:orange;
+    font-size: 15px;
+    cursor: pointer;
+    border-bottom-left-radius: 15px ;
+    border-bottom-right-radius: 15px ;
 }

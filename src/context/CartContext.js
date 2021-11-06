@@ -5,6 +5,7 @@ const CartContext = createContext();
 const CartProvider = ({children}) => {
 
     const [listaItemsCart, setListaItemsCart]= useState([])
+    const [infoCliente, setInfoCliente]=useState([])
 
     const addCart =(productoActual)=>{
 
@@ -17,8 +18,6 @@ const CartProvider = ({children}) => {
         ])
 
     } 
-    console.log("listaItemsCart::: ",listaItemsCart)
-
     const removeItem = (itemId)=>{
 
        setListaItemsCart(
@@ -32,11 +31,18 @@ const CartProvider = ({children}) => {
         setListaItemsCart([])
     }
 
+    const submitInfo = (infoCliente)=>{
+        setInfoCliente(infoCliente)
+        console.log("mostrar informacion del cliente en context",infoCliente)
+    }
+
     const data = {
         addCart,
         removeItem,
         clearCart,
-        listaItemsCart
+        submitInfo,
+        listaItemsCart,
+        infoCliente
     }
     return(
         <CartContext.Provider value={data}>

@@ -11,7 +11,7 @@ const ItemDetailContainer = () =>{
     async function getProduct (db){
         const productsCol = query(
             collection(db, 'items'),
-            where("id", "==", itemid)
+            where("id", "===", itemid)
         ) 
         const productsSnapshot = await getDocs(productsCol);
         const productsList = productsSnapshot.docs.map(doc => doc.data());
@@ -25,7 +25,7 @@ const ItemDetailContainer = () =>{
     },[itemid] )
 
     return(
-        <div>
+        <div className="itemDetailContainer">
             <ItemDetail datos={infoProduct}/>
         </div>
     )

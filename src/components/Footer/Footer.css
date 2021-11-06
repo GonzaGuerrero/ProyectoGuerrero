@@ -1,0 +1,92 @@
+.footer-container{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+.franja-divisor{
+    height: 30px;
+    background-color: orange;
+    width: 100%;
+}
+.footer-container-izq{
+    color: white;
+
+}
+.footer-body{
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+}
+.logo-container-footer{
+    height: 100px;
+}
+.logo-footer{
+    height: 100%;
+}
+.footer-redes{
+    list-style: none;
+}
+.footer-redes li{
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+}
+.footer-redes img{
+    height: 40px;
+    position: relative;
+}
+.redes-titulo{
+    color: black;
+    padding: 5px;
+    background-color: orange;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    transition-duration: 0.5s;
+}
+.redes-titulo2{
+    color: black;
+    padding: 5px;
+    background-color: orange;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    transition-duration: 0.5s;
+}
+.redes-cinta-izq{
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left:0px;
+    transition-duration: 0.5s;
+}
+.redes-cinta-der{
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    right:0px;
+    transition-duration: 0.5s;
+}
+.footer-redes li:hover .redes-cinta-izq{
+    width: 0px;
+}
+.footer-redes li:hover .redes-cinta-der{
+    width: 0px;
+}
+
+.footer-contacto{
+    list-style: none;
+    color: white;
+}
+.footer-tarjetas{
+    height: 200px;
+}

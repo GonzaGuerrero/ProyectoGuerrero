@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 .itemDetail{
     display: flex;
     flex-direction: row;
     padding: 20px 200px;
-    background-color: rgb(233, 233, 233);
+    background-image: url("../../assets/backgrounds/19743.jpg");
+    background-size: contain;
     height: 500px;
+    font-family: 'Poppins', sans-serif;
 }
 .imageContainer{
     width: 50%;
@@ -20,34 +23,35 @@
 
 .titleContainer{
     font-size: 30px;
-    color: yellow;
-    text-shadow: 1px 1px 3px black, -1px -1px 3px black;
-    font-family: 'Black Ops One', cursive;
+    color: black;
+    font-family: 'Poppins', sans-serif;
     height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.precio{
+    font-family: 'Poppins', sans-serif;
+}
 .containerIrAlCarrito{
-    width: 80%;
+    width: 100%;
 }
 .irAlCarrito{
     color: black;
     text-shadow: none;
-    border: 1px solid black;
     border-radius: 10px;
     padding: 5px;
-    font-size: 15px;
-    background-color: whitesmoke;
-    
+    font-size: 20px;
+    background-color: #FFD898;
 }
 .botonAgregarCarrito{
+    border: none;
+    width: 90%;
     color: black;
     text-shadow: none;
-    background-color: yellow;
+    background-color: orange;
+    font-family: 'Poppins', sans-serif;
     border-radius: 10px;
-    font-size: 15px;
-    font-family: 'Black Ops One', cursive;
-    box-shadow: 4px 4px 4px rgb(189, 189, 189) ;
+    font-size: 20px;
     cursor: pointer;
 }

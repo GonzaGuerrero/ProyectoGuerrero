@@ -11,29 +11,11 @@
 .itemCount button{
     height: 25px;
     width: 40px;
-    background-color: yellow;
+    background-color: rgb(197, 197, 197);
     border-radius: 10%;
     border: none;
     box-shadow: 2px 2px 2px black;
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
-}
-.containerAgregarCarrito{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.precio{
-    color: black;
-    text-shadow: none;
-    font-size: 20px;
-}
-.botonAgregarCarrito{
-    color: black;
-    text-shadow: none;
-    background-color: yellow;
-    border-radius: 10px;
-    font-size: 15px;
-    box-shadow: 4px 4px 4px rgb(189, 189, 189) ;
 }

@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 .contenedorCartList{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 5px;
     width: 300px;
-    background-color: whitesmoke;
+    background-color:#FFD898;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 10px;
     max-height: 80vh;
     overflow-y: auto;

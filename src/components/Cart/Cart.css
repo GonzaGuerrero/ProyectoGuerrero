@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 .contenedorCart{
     display: flex;
     flex-direction: row;
-    background-color: whitesmoke;
-    height: 87vh;
+    background-image: url(../../assets/backgrounds/shattered-island.gif);
+    min-height: 87vh;
 }
 .contenedorIzquierdo{
     width: 70%;
@@ -13,17 +14,27 @@
 }
 .contenedorHeader{
     padding: 15px 20px;
-    background-color: rgb(224, 224, 224);
     display: flex;
     flex-direction: row;
 }
 .vaciarCarrito{
+    color: black;
+    background-color: white;
     padding: 5px;
-    border: black 1px solid;
-    width: 100px;
-    box-shadow: 4px 4px 4px rgb(189, 189, 189) ;
+    border: white 1px solid;
+    width: 140px;
+    font-size: 20px;
+    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+    transition-duration: 0.2s;
+    font-family: 'Poppins', sans-serif;
+
+}
+.vaciarCarrito:hover{
+    background-color: orange;
+    color: white;
+    font-weight: bold;
 }
 .contenedorCarritoVacio{
     display: flex;
@@ -32,20 +43,23 @@
     align-items: center;
     height: 50%;
     font-size: 20px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+
 }
 .contenedorCarritoVacio div{
 padding: 20px;
 }
 .contenedorCarritoVacio a{
-    color: black;
+    color: white;
     border-radius: 15px;
-    border: rgb(124, 124, 124) solid 1px;
+    border: rgb(158, 158, 158) solid 1px;
     padding: 15px; 
     transition: transform 0.2s;
 }
 .contenedorCarritoVacio a:hover{
     transform: scale(1.05);
-    border: black solid 1px;
+    border: white solid 1px;
 }
 .contenedorItems{
     display: flex;
@@ -63,10 +77,61 @@ padding: 20px;
     background-color: rgb(224, 224, 224);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     position: sticky;
     top: 0px;
+    font-family: 'Poppins', sans-serif;
+
 }
+.contenedorCliente{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.contenedorAgregarInfo button{
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: orange;
+    border: none;
+    transition-duration: 0.3s;
+}
+.contenedorAgregarInfo button:hover{
+    transform: scale(1.01);
+}
+.noHayInfo{
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.692);
+    margin-top: 20px;
+    position: relative;
+}
+.noHayInfoPico{
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: -20px;
+    left: 47px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 20px solid rgba(0, 0, 0, 0.692);;
+}
+.infoCliente ul{
+    list-style: none;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    transform: translate(-16px);
+}
+.infoCliente ul li{
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px; 
+    margin-top: 20px;
+}
+
 .contenedorLista{
     padding-top: 50px;
     padding-bottom: 50px;
@@ -78,7 +143,7 @@ padding: 20px;
     background-color: black;
     height: 20vh;
     color: yellow;
-    font-family: 'Black Ops One', cursive ;
+    font-family: 'Poppins', sans-serif;
     font-size: 30px;
     padding: 30px;
 }
