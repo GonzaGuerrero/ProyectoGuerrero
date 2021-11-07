@@ -24,6 +24,10 @@
 }
 .logo-container-footer{
     height: 100px;
+    transition-duration: 0.3s;
+}
+.logo-container-footer:hover{
+    transform: scale(1.1);
 }
 .logo-footer{
     height: 100%;
