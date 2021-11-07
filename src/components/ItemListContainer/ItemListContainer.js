@@ -1,28 +1,32 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState, useEffect, useContext} from 'react';
+import { useParams , Link} from 'react-router-dom';
+
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css'
-import { useParams , Link} from 'react-router-dom';
-import db from '../../firebase'
-import { query, where, collection, getDocs } from 'firebase/firestore';
 import banner from "../../assets/banner2.png"
 
+import CartContext from "../../context/CartContext"
+
+import db from '../../firebase'
+import { query, where, collection, getDocs } from 'firebase/firestore';
 
 
 const ItemListContainer = () =>{
     const [products, setProduct]= useState ([])
     const { categoryid } = useParams();
+    const {productoActual,showProductPopUp,isInCart}= useContext(CartContext)
 
-
-    async function getProducts (db){
-        const productsCol = categoryid
-        ?query(collection(db, "items"), where("category", "==", categoryid))
-        :collection(db, 'items');
-        const productsSnapshot = await getDocs(productsCol);
-        const productsList = productsSnapshot.docs.map(doc => doc.data());
-        setProduct(productsList)  
-    }
 
     useEffect ( ()=>{
+
+        async function getProducts (db){
+            const productsCol = categoryid
+            ?query(collection(db, "items"), where("category", "==", categoryid))
+            :collection(db, 'items');
+            const productsSnapshot = await getDocs(productsCol);
+            const productsList = productsSnapshot.docs.map(doc => doc.data());
+            setProduct(productsList)  
+        }
 
         getProducts(db)
 
@@ -32,7 +36,7 @@ const ItemListContainer = () =>{
         <div className="itemListContainer"> 
             <div className="home-background">
                 <div className="banner">
-                    <img src={banner}></img>
+                    <img src={banner} alt="banner"></img>
                 </div>
 
                 
@@ -59,6 +63,13 @@ const ItemListContainer = () =>{
                 
                 <div className="franja-divisor"/>
             </div> 
+            <Link to={"../cart"}  className={`notificacionProductoAñadido ${showProductPopUp?`popupActive`:`popupInactive`}`} id="notificacionProductoAñadido">
+                <div className="notificacionProductoAñadido-img">  <img src={productoActual.img} alt={productoActual.title} /> </div>
+               {isInCart?
+               <div className="notificacionProductoAñadido-texto">{productoActual.title} ya está en el carrito</div>:
+               <div className="notificacionProductoAñadido-texto">{productoActual.title} fue agregado al carrito</div>
+               }
+            </Link>
             <ItemList products={products} />
         </div>
     )

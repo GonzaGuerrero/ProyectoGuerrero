@@ -1,8 +1,9 @@
 import React, {useContext} from "react"
+import { Link } from 'react-router-dom';
+
 import ProductoCart from "../Cart/ProductoCart"
 import CartContext from "../../context/CartContext"
 import "./CartWidget.css"
-import { Link } from 'react-router-dom';
 import trashIcon from '../../assets/trashicon.png';
 
 export default function CartWidget({show, close}){
@@ -46,16 +47,3 @@ export default function CartWidget({show, close}){
 
 
 
-
-
-//import React from 'react'
-//import Cart from '../Cart/Cart'
-//const CartWidget = ({show, close}) =>{
-//    return(
-  //      <>
-    //      <Cart show={show} close={close}></Cart>  
-      //  </>
-   // )
-//}
-
-//export default CartWidget

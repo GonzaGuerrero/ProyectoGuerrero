@@ -53,6 +53,7 @@
     justify-content: space-around;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 .submit-button{
     padding: 20px;
@@ -85,19 +86,42 @@
     border:solid #FFD898 5px;
 }
 
-.faltaInfoContainer{
+.formPopUpContainer{
     position: absolute;
     transition-duration: 1s;
+    display: flex;
+    transition-duration: 0.5s;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
 }
 .show{
-    display: flex;
+    transform: translate(0px);
 }
 .hide{
-    display: none;
+    transform: translate(500px);
 }
-.faltaInfo{
-    background-color: rgba(0, 0, 0, 0.596);
+.formPopUpValid{
+    background-color: rgb(0 0 0 / 42%);
     color: white;
     width: 300px;
     padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+.formPopUpValidPico{
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid rgb(0 0 0 / 42%);
+    position: absolute;
+    bottom:-20px;
+    left: 150px;
+    }
+.formPopUpInvalid{
+    background-color: rgb(255 0 0 / 29%);
+    color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
 }

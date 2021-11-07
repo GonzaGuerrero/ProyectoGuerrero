@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
+import React, {useState} from "react"
+
 import './NavBar.css';
 import logo from '../../assets/logo-mosh2.png'
-import CartWidget from './CartWidget.js'
-import { Link } from 'react-router-dom';
+import CartWidget from '../CartWidget/CartWidget'; 
 import imagenCarrito from '../../assets/carrito.png';
-import React, {useState} from "react"
 
 
 import CartContext from "../../context/CartContext"
@@ -19,7 +20,7 @@ const NavBar = () =>  {
   const {listaItemsCart}= useContext(CartContext)
 
   return (
-    <header className="main-navbar">
+    <header className="main-navbar" id="navBar">
         <div className= "logo-container">
           <Link to={'/'}>   
             <img src={logo} className="logo" alt="logo"/> 

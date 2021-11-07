@@ -1,5 +1,4 @@
 
-import React, {useState, useContext} from "react"
 import ProductoCart from "../Cart/ProductoCart"
 import CartContext from "../../context/CartContext"
 import CartList from "../CartList/CartList"
@@ -8,7 +7,9 @@ import './Cart.css'
 
 import db from "../../firebase"
 import { collection, addDoc} from "firebase/firestore"
+
 import { Link } from "react-router-dom"
+import React, {useState, useContext} from "react"
 
 export default function Cart(){
 
@@ -23,24 +24,22 @@ export default function Cart(){
 
         precioTotal += (item.price*item.quantity ) ;
 
-      //  console.log("el precio total es: ",precioTotal)
     });
 
     const newOrder = {
         buyer:infoCliente,
         items:listaItemsCart,
-        total:precioTotal
+        total:precioTotal,
+        date:new Date()
     }
 
     const finalizarCompra =()=>{
-     //   console.log("orden generada:", newOrder)
         pushOrderFirebase(newOrder)
     }
 
     const pushOrderFirebase = async(newOrder)=>{
         const orderFirebase = collection(db, "orders");
         const order = await addDoc(orderFirebase, newOrder)
-      //  console.log("Id de la orden: ",order.id)
         setOrderId(order.id)
         handlePopUp()
     }

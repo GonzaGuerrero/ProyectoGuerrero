@@ -1,9 +1,13 @@
 import React,{useState} from 'react'
-import ItemCountNuevo from '../ItemCountNuevo/ItemCountNuevo'
 import { Link } from 'react-router-dom';
-import './itemDetail.css'
-import CartContext from "../../context/CartContext"
 import { useContext } from 'react/cjs/react.development';
+
+import ItemCountNuevo from '../ItemCountNuevo/ItemCountNuevo'
+import './itemDetail.css'
+
+import CartContext from "../../context/CartContext"
+
+
 const ItemDetail = (props) =>{
 
     const [cantidad,setCantidad]= useState(1) 
@@ -33,8 +37,6 @@ const ItemDetail = (props) =>{
         setMostrarBoton(false)
     }
 
-    console.log("info del producto actual", productoActual)
-
     return(
         <div className="itemDetail">
                 <div className="imageContainer">
@@ -47,6 +49,9 @@ const ItemDetail = (props) =>{
                     <div className="itemCountNuevoContainer">
                         <div className="precio">
                             <p>${props.datos?.price * cantidad}</p> 
+                        </div>
+                        <div className="descripcion">
+                            <p>{props.datos?.description}</p>
                         </div>
                         <div className="containerBottom">
                              

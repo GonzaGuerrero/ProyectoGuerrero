@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
-import './Product.css'
 import { Link } from 'react-router-dom'
+
+import './Product.css'
+import ItemCountNuevo from '../ItemCountNuevo/ItemCountNuevo'
+
 import CartContext from "../../context/CartContext"
 import { useContext } from 'react/cjs/react.development';
-import ItemCountNuevo from '../ItemCountNuevo/ItemCountNuevo'
 
 
 const Product = (props) =>{
@@ -30,7 +32,6 @@ const Product = (props) =>{
     }
     const agregarAlCarrito =()=>{
         cartData.addCart(productoActual)
-        console.log("informacion del producto: ", productoActual)
     }   
 
 

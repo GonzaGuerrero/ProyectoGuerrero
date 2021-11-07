@@ -8,6 +8,10 @@
     font-size: 18px;
     z-index: 5;
     height: 90px;
+    position: relative;
+}
+#navBar{
+    scroll-behavior: smooth;
 }
 .main-navbar a{
     text-decoration: none;
@@ -48,8 +52,17 @@
     list-style: none;
     background-color: #FFD898;
     border-radius: 10px;
-    padding: 10px;
     z-index: 10;
+    padding: 2px;
+    left: -20px;
+}
+.nav-categorias li{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 7px;
+    transition-duration: 0.3s;
+
 }
 .nav-categorias li:hover{
     background-color: orange;

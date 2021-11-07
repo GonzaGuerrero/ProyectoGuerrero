@@ -37,9 +37,11 @@
     font-weight: bold;
     color: rgb(114, 114, 114);
     cursor: pointer;
+    transition-duration: 0.3s;
 }
 .cerrar:hover{
     color: black;
+    background-color: orange;
 }
 .popup-body{
     display: flex;

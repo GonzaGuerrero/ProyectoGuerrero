@@ -5,7 +5,8 @@
     width: 30%;
     overflow: hidden;
     margin-top: 20px;
-    margin-right: 37px;
+    margin-right: 18px;
+    margin-left: 18px;
     box-shadow: 4px 4px 4px rgb(228, 228, 228) ;
     color: black;
     font-family: 'Poppins', sans-serif;
@@ -30,7 +31,7 @@
     font-size: 15px;
     padding: 7px;
     border-radius: 10px;
-    transition: transform 0.2s;
+    transition-duration: 0.3s;
 }
 .botonVer:hover{
     transform: scale(1.5);
@@ -64,4 +65,8 @@
     cursor: pointer;
     border-bottom-left-radius: 15px ;
     border-bottom-right-radius: 15px ;
+    transition-duration: 0.2s;
+}
+.botonAgregarCarrito1:hover{
+    background-color:#FFD898;
 }

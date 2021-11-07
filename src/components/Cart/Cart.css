@@ -150,8 +150,12 @@ padding: 20px;
 .botonFinalizarCompra{
     padding: 20px;
     color: black;
-    background-color: yellow;
+    background-color: orange;
     border-radius: 10px;
     font-size: 20px;
     cursor: pointer;
+    transition-duration: 1s;
+}
+.botonFinalizarCompra:hover{
+    background-color: yellow;
 }
